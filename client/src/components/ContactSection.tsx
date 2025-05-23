@@ -182,7 +182,7 @@ export default function ContactSection() {
                   name="nome"
                   id="nome"
                   required
-                  className="w-full border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple"
+                  className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm"
                 />
               </div>
 
@@ -195,7 +195,7 @@ export default function ContactSection() {
                   name="email"
                   id="email"
                   required
-                  className="w-full border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple"
+                  className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm"
                 />
               </div>
 
@@ -207,7 +207,7 @@ export default function ContactSection() {
                   type="tel"
                   name="telefone"
                   id="telefone"
-                  className="w-full border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple"
+                  className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm"
                 />
               </div>
 
@@ -216,7 +216,7 @@ export default function ContactSection() {
                   Serviço de interesse
                 </label>
                 <Select name="servico">
-                  <SelectTrigger className="border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple">
+                  <SelectTrigger className="bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm">
                     <SelectValue placeholder="Selecione um serviço" />
                   </SelectTrigger>
                   <SelectContent>
@@ -239,7 +239,7 @@ export default function ContactSection() {
                   id="mensagem"
                   rows={4}
                   placeholder="Conte-me um pouco sobre suas expectativas e como posso te ajudar..."
-                  className="w-full border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple resize-none"
+                  className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple resize-none shadow-sm placeholder:text-gray-500"
                 />
               </div>
 
