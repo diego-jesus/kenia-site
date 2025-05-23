@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           <div className="border-t border-white/20 pt-8">
-            <p className="text-white/80">
+            <p className="text-sm text-gray-200 text-center">
               © 2024 Kênia Ruth Consultoria. Todos os direitos reservados.
             </p>
           </div>
