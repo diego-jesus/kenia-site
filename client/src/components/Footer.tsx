@@ -32,13 +32,13 @@ export default function Footer() {
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-3xl font-cursive font-bold mb-4 cursor-pointer text-purple-100"
+            className="text-3xl font-cursive font-bold mb-4 cursor-pointer text-white"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             Kênia Ruth
           </motion.div>
 
-          <p className="text-lg font-elegant italic mb-8 max-w-2xl mx-auto text-purple-100">
+          <p className="text-lg font-elegant italic mb-8 max-w-2xl mx-auto text-white">
             "Inspirando autoestima todos os dias com empatia e propósito."
           </p>
 
@@ -51,7 +51,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors duration-300 text-purple-100"
+                className="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors duration-300 text-white"
                 aria-label={link.label}
               >
                 <link.icon size={24} />
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           <div className="border-t border-purple-100/40 pt-8">
-            <p className="text-sm text-purple-100 text-center font-medium">
+            <p className="text-sm text-white text-center font-medium">
               © 2024 Kênia Ruth Consultoria. Todos os direitos reservados.
             </p>
           </div>
