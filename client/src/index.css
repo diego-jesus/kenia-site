@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 251 251 252; /* #fbfbfc */
+  --foreground: 45 27 61; /* #2d1b3d */
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 276 47% 73%; /* #c4a3d3 brand-purple */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 276 47% 73%;
+  --radius: 0.5rem;
+  --brand-pink: 324 41% 81%; /* #eab3db */
+  --brand-lilac: 268 53% 85%; /* #d5c6f0 */
+  --brand-purple: 276 47% 73%; /* #c4a3d3 */
+  --neutral-light: 272 43% 98%; /* #faf9fc */
+  --text-dark: 45 27 61; /* #2d1b3d */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 276 47% 73%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-neutral-light text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-cursive {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-elegant {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .bg-neutral-light {
+    background-color: hsl(var(--neutral-light));
+  }
+
+  .text-text-dark {
+    color: hsl(var(--text-dark));
+  }
+
+  .bg-brand-pink {
+    background-color: hsl(var(--brand-pink));
+  }
+
+  .bg-brand-lilac {
+    background-color: hsl(var(--brand-lilac));
+  }
+
+  .bg-brand-purple {
+    background-color: hsl(var(--brand-purple));
+  }
+
+  .text-brand-pink {
+    color: hsl(var(--brand-pink));
+  }
+
+  .text-brand-lilac {
+    color: hsl(var(--brand-lilac));
+  }
+
+  .text-brand-purple {
+    color: hsl(var(--brand-purple));
+  }
+
+  .border-brand-pink {
+    border-color: hsl(var(--brand-pink));
+  }
+
+  .border-brand-lilac {
+    border-color: hsl(var(--brand-lilac));
+  }
+
+  .border-brand-purple {
+    border-color: hsl(var(--brand-purple));
+  }
+
+  .from-brand-pink {
+    --tw-gradient-from: hsl(var(--brand-pink)) var(--tw-gradient-from-position);
+  }
+
+  .to-brand-pink {
+    --tw-gradient-to: hsl(var(--brand-pink)) var(--tw-gradient-to-position);
+  }
+
+  .via-brand-pink {
+    --tw-gradient-to: hsl(var(--brand-pink)) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--brand-pink)) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+
+  .from-brand-lilac {
+    --tw-gradient-from: hsl(var(--brand-lilac)) var(--tw-gradient-from-position);
+  }
+
+  .to-brand-lilac {
+    --tw-gradient-to: hsl(var(--brand-lilac)) var(--tw-gradient-to-position);
+  }
+
+  .via-brand-lilac {
+    --tw-gradient-to: hsl(var(--brand-lilac)) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--brand-lilac)) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+
+  .from-brand-purple {
+    --tw-gradient-from: hsl(var(--brand-purple)) var(--tw-gradient-from-position);
+  }
+
+  .to-brand-purple {
+    --tw-gradient-to: hsl(var(--brand-purple)) var(--tw-gradient-to-position);
+  }
+
+  .via-brand-purple {
+    --tw-gradient-to: hsl(var(--brand-purple)) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--brand-purple)) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--neutral-light));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--brand-purple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--brand-pink));
+}
