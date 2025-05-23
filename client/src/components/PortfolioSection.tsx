@@ -3,34 +3,40 @@ import { motion } from "framer-motion";
 export default function PortfolioSection() {
   const portfolioItems = [
     {
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      title: "Consultoria Completa",
-      description: "Transformação de imagem e autoestima",
+      image: "/imagens/img1.JPG",
+      title: "História do Elefante de Circo",
+      description: "Reflexão sobre crenças limitantes e autossabotagem",
+      link: "https://www.instagram.com/p/DJ706fVRds4/?img_index=1",
     },
     {
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      title: "Personal Styling",
-      description: "Descobrindo o estilo pessoal único",
+      image: "/imagens/img2.JPG",
+      title: "Sabedoria não é passividade, é coragem com propósito",
+      description: "A força feminina para transformar relações",
+      link: "https://www.instagram.com/p/DJ6c0S_RQAZ/?img_index=1",
     },
     {
-      image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      title: "Imagem Profissional",
-      description: "Consultoria para ambiente corporativo",
+      image: "/imagens/img3.JPG",
+      title: "Famílias que Superam",
+      description: "A importância de enfrentar o processo em conjunto",
+      link: "https://www.instagram.com/p/DJ39yZ2xMRK/?img_index=1",
     },
     {
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      title: "Casual Chic",
-      description: "Elegância no dia a dia",
+      image: "/imagens/img4.JPG",
+      title: "A sua vitória está FORA da sua zona de conforto",
+      description: "A zona de conforto é enganosa… Ela nos prende no conhecido, no seguro, no previsível",
+      link: "https://www.instagram.com/keniaruthsampaio/p/DKAe7xARtF3/",
+          },
+    {
+      image: "/imagens/img5.JPG",
+      title: "Confie no processo, mesmo quando não vê nada",
+      description: "Sobre o valor do silêncio no processo interno",
+      link: "https://www.instagram.com/p/DJ_4n6pR9ma/?img_index=1",
     },
     {
-      image: "https://images.unsplash.com/photo-1494790108755-2616c395a3e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      title: "Resultado Final",
-      description: "Confiança e autoestima renovadas",
-    },
-    {
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      title: "Mãe Empoderada",
-      description: "Autoestima que inspira a família",
+      image: "/imagens/img6.JPG",
+      title: "Com fé, amor e intencionalidade",
+      description: "Cada passo de coragem que uma mulher dá, impacta toda a casa",
+      link: "https://www.instagram.com/p/DIKSJ3dS-2R/",
     },
   ];
 
@@ -45,18 +51,20 @@ export default function PortfolioSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-elegant font-bold text-text-dark mb-4">
-            Portfólio
+            Presença Digital
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Cada transformação é única e especial. Veja alguns momentos de
-            empoderamento e autoestima renovada.
+            Alguns dos conteúdos que compartilho com mulheres que desejam restaurar sua identidade, fé e força interior.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolioItems.map((item, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -68,7 +76,7 @@ export default function PortfolioSection() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-[500px] md:h-[600px] object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -77,7 +85,7 @@ export default function PortfolioSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>

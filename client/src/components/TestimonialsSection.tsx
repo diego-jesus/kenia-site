@@ -1,26 +1,38 @@
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, MessageCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      text: "A Kênia transformou completamente minha relação comigo mesma. Hoje me sinto mais confiante e radiante. O trabalho dela vai muito além da aparência, toca a alma.",
-      name: "Ana Paula",
-      role: "Empresária, 42 anos",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      text: "Levarei você sempre comigo, no coração e na minha caminhada. A vida sempre dá um jeito de aproximar quem deixa marcas bonitas. Obrigada por tudo, de verdade!",
+      name: "Depoimento real 01",
+      role: "Cliente da Mentoria Restaurar",
     },
     {
-      text: "Depois dos filhos, eu havia perdido minha identidade. A Kênia me ajudou a me reencontrar e hoje me sinto linda e poderosa novamente. Recomendo de coração!",
-      name: "Mariana Silva",
-      role: "Mãe de 3, 38 anos",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      text: "Você não é apenas uma excelente profissional, mas uma pessoa incrível. Seu jeito único de tornar tudo mais leve fez toda a diferença para mim.",
+      name: "Depoimento real 02",
+      role: "Cliente de acompanhamento individual",
     },
     {
-      text: "O atendimento da Kênia é diferenciado. Ela realmente se importa e entende nossas necessidades. Saí renovada e com uma autoestima lá em cima!",
-      name: "Luciana Costa",
-      role: "Advogada, 45 anos",
-      avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      text: "Obrigada por tanto cuidado, atenção e ajuda comigo, meu esposo e nosso filho! Cada conversa abre meus olhos e fortalece minha alma. Deus te abençoe!",
+      name: "Depoimento real 03",
+      role: "Família acompanhada por Kênia Ruth",
+    },
+    {
+      text: "Nunca imaginei que uma mentoria pudesse me tocar tão profundamente. Encontrei escuta, acolhimento e uma nova versão de mim mesma.",
+      name: "Depoimento real 04",
+      role: "Cliente da Jornada Restaurar",
+    },
+    {
+      text: "Você foi luz num momento de escuridão. Obrigada por segurar minha mão com firmeza e me lembrar do meu valor.",
+      name: "Depoimento real 05",
+      role: "Atendimento online individual",
+    },
+    {
+      text: "Me emocionei em várias sessões. A cada encontro, sentia um pedaço de mim sendo restaurado. Profissional com alma!",
+      name: "Depoimento real 06",
+      role: "Mulher que se reconectou com sua essência",
     },
   ];
 
@@ -38,8 +50,7 @@ export default function TestimonialsSection() {
             O que dizem minhas clientes
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Cada depoimento é um reflexo do cuidado e dedicação que coloco em
-            cada atendimento.
+            Cada depoimento é um reflexo do cuidado e dedicação que coloco em cada atendimento.
           </p>
         </motion.div>
 
@@ -64,11 +75,9 @@ export default function TestimonialsSection() {
                     "{testimonial.text}"
                   </p>
                   <div className="flex items-center">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-brand-lilac"
-                    />
+                    <div className="w-12 h-12 rounded-full bg-brand-lilac flex items-center justify-center text-white">
+                      <MessageCircle size={20} />
+                    </div>
                     <div className="ml-3">
                       <div className="font-semibold text-text-dark">
                         {testimonial.name}

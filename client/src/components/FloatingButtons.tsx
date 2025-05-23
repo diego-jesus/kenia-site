@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquare, Instagram } from "lucide-react";
+import { MessageSquare, Instagram, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -7,15 +7,22 @@ export default function FloatingButtons() {
   const buttons = [
     {
       icon: MessageSquare,
-      href: "https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta com a Kênia Ruth.",
+      href: "https://wa.me/553187037264?text=Olá! Gostaria de agendar uma consulta com a Kênia Ruth.",
       bgColor: "bg-green-500 hover:bg-green-600",
       tooltip: "Fale comigo no WhatsApp",
     },
     {
       icon: Instagram,
-      href: "https://instagram.com/kenia.ruth",
-      bgColor: "bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600",
+      href: "https://instagram.com/keniaruthsampaio",
+      bgColor:
+        "bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600",
       tooltip: "Siga no Instagram",
+    },
+    {
+      icon: Mail,
+      href: "mailto:restaurarfilhosdagraca@gmail.com",
+      bgColor: "bg-blue-500 hover:bg-blue-600",
+      tooltip: "Envie um e-mail",
     },
   ];
 

@@ -47,10 +47,17 @@ export default function Header() {
         <nav className="flex justify-between items-center">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-3xl md:text-4xl font-cursive font-bold text-white cursor-pointer"
+            className="flex items-center gap-2 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            Kênia Ruth
+            <img
+              src="/logos/logo-kenia.JPG"
+              alt="Logo <span style={{ color: '#5B4395' }}>Kênia Ruth</span>"
+              className="h-8 md:h-10"
+            />
+            <span className="text-3xl md:text-4xl font-cursive font-bold" style={{ color: '#5B4395' }}>
+              Kênia Ruth
+            </span>
           </motion.div>
 
           {/* Desktop Navigation */}

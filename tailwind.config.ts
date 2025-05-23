@@ -61,6 +61,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "brand-pink": "#E07EFC",
+        "brand-purple": "#5B4395",
+        "brand-lilac": "#B18FCF",
+        "text-dark": "#2D2D2D",
       },
       keyframes: {
         "accordion-down": {

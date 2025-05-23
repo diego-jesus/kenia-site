@@ -4,7 +4,10 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const handleScheduling = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta com a Kênia Ruth.", "_blank");
+    window.open(
+      "https://wa.me/553187037264?text=Olá! Gostaria de agendar uma consulta com a Kênia Ruth.",
+      "_blank"
+    );
   };
 
   return (

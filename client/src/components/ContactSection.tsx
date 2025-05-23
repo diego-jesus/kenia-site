@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MessageSquare, Instagram, Mail, Phone, Send, Clock } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { MessageSquare, Instagram, Mail, Send, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
@@ -16,12 +14,10 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Get form data
     const formData = new FormData(e.currentTarget);
-    
+
     try {
-      // Submit to FormSubmit
-      const response = await fetch("https://formsubmit.co/contato@keniaruth.com", {
+      const response = await fetch("https://formsubmit.co/restaurarfilhosdagraca@gmail.com", {
         method: "POST",
         body: formData,
       });
@@ -49,31 +45,31 @@ export default function ContactSection() {
   const contactMethods = [
     {
       icon: MessageSquare,
-      title: "WhatsApp",
-      subtitle: "(11) 99999-9999",
+      title: "WhatsApp 🤝",
+      subtitle: "(31) 8703-7264",
       description: "Resposta rápida e acolhedora",
-      href: "https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta com a Kênia Ruth.",
-      bgColor: "from-green-50 to-green-100",
+      href: "https://wa.me/553187037264?text=Olá! Gostaria de agendar uma consulta com a Kênia Ruth.",
+      bg: "bg-gradient-to-r from-brand-lilac/30 to-brand-pink/30",
       iconColor: "bg-green-500",
       textColor: "text-green-600",
     },
     {
       icon: Instagram,
-      title: "Instagram",
-      subtitle: "@kenia.ruth",
+      title: "Instagram 📸",
+      subtitle: "@keniaruthsampaio",
       description: "Dicas diárias de autoestima",
-      href: "https://instagram.com/kenia.ruth",
-      bgColor: "from-pink-50 to-purple-100",
+      href: "https://instagram.com/keniaruthsampaio",
+      bg: "bg-gradient-to-r from-brand-pink/30 to-brand-purple/30",
       iconColor: "bg-gradient-to-r from-pink-500 to-purple-500",
       textColor: "text-purple-600",
     },
     {
       icon: Mail,
-      title: "E-mail",
-      subtitle: "contato@keniaruth.com",
+      title: "E-mail 📧",
+      subtitle: "restaurarfilhosdagraca@gmail.com",
       description: "Para agendamentos e parcerias",
-      href: "mailto:contato@keniaruth.com",
-      bgColor: "from-blue-50 to-indigo-100",
+      href: "mailto:restaurarfilhosdagraca@gmail.com",
+      bg: "bg-gradient-to-r from-brand-purple/20 to-brand-lilac/20",
       iconColor: "bg-blue-500",
       textColor: "text-blue-600",
     },
@@ -93,8 +89,7 @@ export default function ContactSection() {
             Entre em Contato
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Estou aqui para te acolher e iniciarmos juntas sua jornada de
-            transformação e autoestima.
+            Estou aqui para te acolher e iniciarmos juntas sua jornada de transformação e autoestima.
           </p>
         </motion.div>
 
@@ -121,19 +116,15 @@ export default function ContactSection() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02 }}
-                  className={`flex items-center p-6 bg-gradient-to-r ${method.bgColor} rounded-xl hover:shadow-lg transition-all duration-300 group w-full`}
+                  className={`flex items-center p-6 ${method.bg} rounded-xl hover:shadow-lg transition-all duration-300 group w-full`}
                 >
                   <div className={`${method.iconColor} text-white p-4 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                     <method.icon size={24} />
                   </div>
                   <div className="flex-grow">
-                    <div className="font-semibold text-text-dark">
-                      {method.title}
-                    </div>
+                    <div className="font-semibold text-text-dark">{method.title}</div>
                     <div className="text-gray-600">{method.subtitle}</div>
-                    <div className={`text-sm ${method.textColor}`}>
-                      {method.description}
-                    </div>
+                    <div className={`text-sm ${method.textColor}`}>{method.description}</div>
                   </div>
                 </motion.a>
               ))}
@@ -165,98 +156,40 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="w-full"
           >
-            <h3 className="text-2xl font-semibold text-text-dark mb-8">
-              Envie uma Mensagem
-            </h3>
+            <h3 className="text-2xl font-semibold text-text-dark mb-8">Envie uma Mensagem</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <input type="hidden" name="_subject" value="Nova mensagem do site - Kênia Ruth" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value={`${window.location.origin}/obrigada`} />
 
               <div>
-                <label htmlFor="nome" className="block text-text-dark font-medium mb-2">
-                  Nome completo
-                </label>
-                <Input
-                  type="text"
-                  name="nome"
-                  id="nome"
-                  required
-                  className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm"
-                />
+                <label htmlFor="nome" className="block text-text-dark font-medium mb-2">Nome completo</label>
+                <Input type="text" name="nome" id="nome" required className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm" />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-text-dark font-medium mb-2">
-                  E-mail
-                </label>
-                <Input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm"
-                />
+                <label htmlFor="email" className="block text-text-dark font-medium mb-2">E-mail</label>
+                <Input type="email" name="email" id="email" required className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm" />
               </div>
 
               <div>
-                <label htmlFor="telefone" className="block text-text-dark font-medium mb-2">
-                  Telefone/WhatsApp
-                </label>
-                <Input
-                  type="tel"
-                  name="telefone"
-                  id="telefone"
-                  className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm"
-                />
+                <label htmlFor="telefone" className="block text-text-dark font-medium mb-2">Telefone/WhatsApp</label>
+                <Input type="tel" name="telefone" id="telefone" className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm" />
               </div>
 
               <div>
-                <label htmlFor="servico" className="block text-text-dark font-medium mb-2">
-                  Serviço de interesse
-                </label>
-                <Select name="servico">
-                  <SelectTrigger className="bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple shadow-sm">
-                    <SelectValue placeholder="Selecione um serviço" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="consultoria-imagem">Consultoria de Imagem</SelectItem>
-                    <SelectItem value="coaching-autoestima">Coaching de Autoestima</SelectItem>
-                    <SelectItem value="coloracao-pessoal">Coloração Pessoal</SelectItem>
-                    <SelectItem value="workshop-grupo">Workshop em Grupo</SelectItem>
-                    <SelectItem value="personal-shopper">Personal Shopper</SelectItem>
-                    <SelectItem value="consultoria-online">Consultoria Online</SelectItem>
-                  </SelectContent>
-                </Select>
+                <label htmlFor="mensagem" className="block text-text-dark font-medium mb-2">Mensagem</label>
+                <Textarea name="mensagem" id="mensagem" rows={4} placeholder="Conte-me um pouco sobre suas expectativas e como posso te ajudar..." className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple resize-none shadow-sm placeholder:text-gray-500" />
               </div>
 
-              <div>
-                <label htmlFor="mensagem" className="block text-text-dark font-medium mb-2">
-                  Mensagem
-                </label>
-                <Textarea
-                  name="mensagem"
-                  id="mensagem"
-                  rows={4}
-                  placeholder="Conte-me um pouco sobre suas expectativas e como posso te ajudar..."
-                  className="w-full bg-pink-100 border-brand-lilac/30 focus:ring-brand-purple/50 focus:border-brand-purple resize-none shadow-sm placeholder:text-gray-500"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-brand-purple to-brand-pink text-white py-4 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
-              >
+              <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-brand-purple to-brand-pink text-white py-4 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg">
                 {isSubmitting ? (
                   <>
-                    <div className="animate-spin mr-2">⏳</div>
-                    Enviando...
+                    <div className="animate-spin mr-2">⏳</div> Enviando...
                   </>
                 ) : (
                   <>
-                    <Send className="mr-2 h-5 w-5" />
-                    Enviar Mensagem
+                    <Send className="mr-2 h-5 w-5" /> Enviar Mensagem
                   </>
                 )}
               </Button>

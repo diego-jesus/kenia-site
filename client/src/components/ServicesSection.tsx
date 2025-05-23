@@ -1,46 +1,31 @@
 import { motion } from "framer-motion";
-import { Bath, Heart, Palette, Users, ShoppingBag, Video } from "lucide-react";
+import { HeartHandshake, CalendarClock, Gift } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function ServicesSection() {
   const services = [
-    {
-      icon: Bath,
-      title: "Consultoria de Imagem",
-      description: "Descubra seu estilo único e aprenda a se vestir de forma que reflita sua personalidade e realce sua beleza natural.",
-      price: "A partir de R$ 150",
-    },
-    {
-      icon: Heart,
-      title: "Coaching de Autoestima",
-      description: "Sessões focadas em fortalecer sua confiança interior e desenvolver uma relação saudável com sua autoimagem.",
-      price: "A partir de R$ 200",
-    },
-    {
-      icon: Palette,
-      title: "Coloração Pessoal",
-      description: "Identifique as cores que mais favorecem seu tom de pele e aprenda a criar looks harmoniosos e radiantes.",
-      price: "A partir de R$ 180",
-    },
-    {
-      icon: Users,
-      title: "Workshops em Grupo",
-      description: "Experiências coletivas de empoderamento e troca, criando uma rede de apoio entre mulheres.",
-      price: "A partir de R$ 80",
-    },
-    {
-      icon: ShoppingBag,
-      title: "Personal Shopper",
-      description: "Acompanhamento personalizado para renovar seu guarda-roupa de forma consciente e alinhada ao seu estilo.",
-      price: "A partir de R$ 250",
-    },
-    {
-      icon: Video,
-      title: "Consultoria Online",
-      description: "Atendimento remoto personalizado para clientes que preferem o conforto de casa ou estão distantes.",
-      price: "A partir de R$ 120",
-    },
-  ];
+  {
+    icon: HeartHandshake,
+    title: "Mentoria Restaurar 🤝",
+    description:
+      "Acompanhamento mensal online voltado para mulheres que querem retomar o autocuidado, a autoestima e o equilíbrio emocional.",
+    price: "Mentoria mensal – Consulte valores",
+  },
+  {
+    icon: CalendarClock,
+    title: "Sessão de Mentoria Pontual ☀️",
+    description:
+      "Encontro único de orientação para decisões importantes, sobrecarga emocional ou redirecionamento de vida.",
+    price: "Sessão avulsa – Consulte valores",
+  },
+  {
+    icon: Gift,
+    title: "Brinde Digital 🌸",
+    description:
+      "Um material exclusivo para você iniciar sua jornada de cuidado e autoconhecimento. Em breve disponível para download aqui no site!",
+    price: "Gratuito",
+  },
+];
 
   return (
     <section id="servicos" className="py-20 bg-gradient-to-br from-brand-lilac/10 to-brand-pink/10">
@@ -56,8 +41,7 @@ export default function ServicesSection() {
             Serviços Oferecidos
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Cada serviço é pensado com carinho para atender suas necessidades
-            únicas de forma personalizada e acolhedora.
+            Cada serviço é pensado com carinho para acompanhar mulheres que desejam se reconectar consigo mesmas com leveza, ética e acolhimento.
           </p>
         </motion.div>
 

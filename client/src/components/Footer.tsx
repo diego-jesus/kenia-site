@@ -5,17 +5,17 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: MessageSquare,
-      href: "https://wa.me/5511999999999",
+      href: "https://wa.me/553187037264",
       label: "WhatsApp",
     },
     {
       icon: Instagram,
-      href: "https://instagram.com/kenia.ruth",
+      href: "https://instagram.com/keniaruthsampaio",
       label: "Instagram",
     },
     {
       icon: Mail,
-      href: "mailto:contato@keniaruth.com",
+      href: "mailto:restaurarfilhosdagraca@gmail.com",
       label: "E-mail",
     },
   ];
@@ -39,7 +39,7 @@ export default function Footer() {
           </motion.div>
 
           <p className="text-lg font-elegant italic mb-8 max-w-2xl mx-auto text-purple-400">
-            "Inspirando autoestima todos os dias com empatia e propósito."
+            "A coragem de evoluir constrói uma revolução ao redor" 
           </p>
 
           <div className="flex justify-center space-x-6 mb-8">
@@ -61,7 +61,7 @@ export default function Footer() {
 
           <div className="border-t border-purple-100/40 pt-8">
             <p className="text-sm text-purple-400 text-center font-medium">
-              © 2024 Kênia Ruth Consultoria. Todos os direitos reservados.
+              © 2025 Kênia Ruth Consultoria. Todos os direitos reservados.
             </p>
           </div>
         </motion.div>
