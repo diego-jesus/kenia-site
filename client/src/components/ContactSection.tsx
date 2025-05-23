@@ -98,12 +98,13 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="w-full"
           >
             <h3 className="text-2xl font-semibold text-text-dark mb-8">
               Formas de Contato
@@ -120,12 +121,12 @@ export default function ContactSection() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02 }}
-                  className={`flex items-center p-6 bg-gradient-to-r ${method.bgColor} rounded-xl hover:shadow-lg transition-all duration-300 group`}
+                  className={`flex items-center p-6 bg-gradient-to-r ${method.bgColor} rounded-xl hover:shadow-lg transition-all duration-300 group w-full`}
                 >
-                  <div className={`${method.iconColor} text-white p-4 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`${method.iconColor} text-white p-4 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                     <method.icon size={24} />
                   </div>
-                  <div>
+                  <div className="flex-grow">
                     <div className="font-semibold text-text-dark">
                       {method.title}
                     </div>
@@ -143,7 +144,7 @@ export default function ContactSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="mt-8 p-6 bg-gradient-to-r from-brand-pink/10 to-brand-lilac/10 rounded-xl"
+              className="mt-8 p-6 bg-gradient-to-r from-brand-pink/10 to-brand-lilac/10 rounded-xl w-full"
             >
               <h4 className="font-semibold text-text-dark mb-2 flex items-center">
                 <Clock size={20} className="mr-2" />
@@ -162,6 +163,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
+            className="w-full"
           >
             <h3 className="text-2xl font-semibold text-text-dark mb-8">
               Envie uma Mensagem
